@@ -1,0 +1,1033 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.apply-btn {
+    color: black;
+    padding: 8px 20px;
+    font-weight: bold;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Slider Styles */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 400px;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-nav button {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: #333;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider-nav button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.slider-dots {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+/* Gallery Section */
+.container-image {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.box {
+    position: relative;
+    overflow: hidden;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.caption,
+.caption-2,
+.caption-3,
+.caption-4,
+.caption-5,
+.caption-6,
+.caption-7 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.caption,
+.caption-4,
+.caption-6 {
+    background: #df3a56;
+}
+
+.caption-2 {
+    background: #007bff;
+}
+
+.caption-3,
+.caption-5,
+.caption-7 {
+    background: #29b474;
+}
+
+.box:nth-child(1),
+.box:nth-child(6) {
+    grid-column: span 2;
+}
+
+/* More News Button */
+.news-sec {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.news-sec a {
+    text-decoration: none;
+    background-color: #29b474;
+    color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+/* Record Breaking for Businesses Section */
+.sect-ion {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section-h {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.section-h h1,
+.section-h h2 {
+    font-size: 36px;
+    color: #e91e63;
+    font-weight: bold;
+    text-transform: uppercase;
+    flex: 1;
+}
+
+.section-h p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    flex: 2;
+}
+
+.cards-grid,
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card:nth-child(1) .card-overlay {
+    background-color: #00bcd4;
+}
+
+.card:nth-child(2) .card-overlay {
+    background-color: #e91e63;
+}
+
+.card:nth-child(3) .card-overlay {
+    background-color: #ff9800;
+}
+
+.card:nth-child(4) .card-overlay {
+    background-color: #4caf50;
+}
+
+.cta-button {
+    display: block;
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.cta-button:hover {
+    background-color: #388e3c;
+}
+
+/* GWR for Business Section */
+.para-inline {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: url('https://media.istockphoto.com/id/1358059564/vector/golden-stadium-lights-with-rays.jpg?s=612x612&w=0&k=20&c=VP1m8Xjc7I3H54ZpZf94vb2ycPL0C9jG43SmqrKQyvs=') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.para {
+    background: rgba(0, 162, 232, 0.8);
+    color: white;
+    height: 60vh;
+    padding: 30px;
+    max-width: 400px;
+    margin-left: 50px;
+    opacity: 0.8;
+}
+
+.para h1 {
+    margin-top: 10px;
+    border-bottom: 1px solid #bbb;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Visit Our New Store Section */
+.para-outline {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: linear-gradient(to right, navy, skyblue);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.para-1 {
+    background: rgba(2, 142, 201, 0.8);
+    color: white;
+    height: 60vh;
+    padding: 30px;
+    max-width: 400px;
+    margin-left: 50px;
+    opacity: 0.9;
+}
+
+.para-1 h1 {
+    margin-top: 10px;
+    border-bottom: 1px solid #bbb;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    background: #388e3c;
+    color: #fff;
+    width: 50%;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+/* Office Image */
+.office-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.office-img img {
+    width: 50%;
+    max-width: 100%;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    color: #e91e63;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #e91e63;
+}
+
+.footer-column ul li a::before {
+    content: "• ";
+    color: #e91e63;
+}
+
+.social-icons {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 24px;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e91e63;
+}
+
+.language-selector {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.language-selector a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.language-selector a:hover {
+    color: #e91e63;
+}
+
+.language-selector a.active {
+    font-weight: bold;
+    color: #e91e63;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.copyright a {
+    color: #666;
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    /* Header */
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    /* Slider */
+    .slider {
+        height: 350px;
+    }
+
+    .slide-caption h2 {
+        font-size: 24px;
+    }
+
+    .slide-caption p {
+        font-size: 14px;
+    }
+
+    .slider-nav button {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+
+    /* Gallery Section */
+    .container-image {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box:nth-child(1),
+    .box:nth-child(6) {
+        grid-column: span 1;
+    }
+
+    .caption,
+    .caption-2,
+    .caption-3,
+    .caption-4,
+    .caption-5,
+    .caption-6,
+    .caption-7 {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    /* Record Breaking for Businesses Section */
+    .section-h {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-h h2 {
+        margin-bottom: 20px;
+    }
+
+    .cards-grid,
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    .card-overlay {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* GWR for Business Section */
+    .para {
+        max-width: 350px;
+        height: 50vh;
+        padding: 20px;
+        margin-left: 30px;
+    }
+
+    .para h1 {
+        font-size: 28px;
+    }
+
+    .para p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Visit Our New Store Section */
+    .para-1 {
+        max-width: 350px;
+        height: 50vh;
+        padding: 20px;
+        margin-left: 30px;
+    }
+
+    .para-1 h1 {
+        font-size: 28px;
+    }
+
+    .para-1 p {
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 14px;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Header */
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    /* Slider */
+    .slider {
+        height: 300px;
+    }
+
+    .slide-caption h2 {
+        font-size: 20px;
+    }
+
+    .slide-caption p {
+        font-size: 12px;
+    }
+
+    .slider-nav button {
+        font-size: 18px;
+        padding: 6px 10px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Gallery Section */
+    .container-image {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .caption,
+    .caption-2,
+    .caption-3,
+    .caption-4,
+    .caption-5,
+    .caption-6,
+    .caption-7 {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    /* More News Button */
+    .news-sec a {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    /* Record Breaking for Businesses Section */
+    .section-h h1,
+    .section-h h2 {
+        font-size: 28px;
+    }
+
+    .section-h p {
+        font-size: 16px;
+    }
+
+    .cards-grid,
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .card-overlay {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    /* GWR for Business Section */
+    .para-inline {
+        height: 60vh;
+    }
+
+    .para {
+        max-width: 300px;
+        height: 45vh;
+        padding: 15px;
+        margin-left: 20px;
+    }
+
+    .para h1 {
+        font-size: 24px;
+    }
+
+    .para p {
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    /* Visit Our New Store Section */
+    .para-outline {
+        height: 60vh;
+    }
+
+    .para-1 {
+        max-width: 300px;
+        height: 45vh;
+        padding: 15px;
+        margin-left: 20px;
+    }
+
+    .para-1 h1 {
+        font-size: 24px;
+    }
+
+    .para-1 p {
+        font-size: 12px;
+    }
+
+    .button {
+        padding: 6px 12px;
+        font-size: 12px;
+        width: 70%;
+    }
+
+    /* Office Image */
+    .office-img img {
+        width: 70%;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 30px;
+    }
+
+    .social-icons a {
+        margin: 0 10px;
+        font-size: 20px;
+    }
+
+    .language-selector a {
+        margin: 5px 8px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Header */
+    .container {
+        padding: 0 10px;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    /* Slider */
+    .slider {
+        height: 250px;
+    }
+
+    .slide-caption {
+        bottom: 10px;
+        left: 10px;
+        padding: 5px 10px;
+    }
+
+    .slide-caption h2 {
+        font-size: 16px;
+    }
+
+    .slide-caption p {
+        font-size: 10px;
+    }
+
+    .slider-nav button {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Gallery Section */
+    .container-image {
+        padding: 5px;
+    }
+
+    .caption,
+    .caption-2,
+    .caption-3,
+    .caption-4,
+    .caption-5,
+    .caption-6,
+    .caption-7 {
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    /* More News Button */
+    .news-sec a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Record Breaking for Businesses Section */
+    .sect-ion {
+        padding: 20px 10px;
+    }
+
+    .section-h h1,
+    .section-h h2 {
+        font-size: 24px;
+    }
+
+    .section-h p {
+        font-size: 14px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    .card-overlay {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    /* GWR for Business Section */
+    .para-inline {
+        height: 50vh;
+    }
+
+    .para {
+        max-width: 250px;
+        height: 40vh;
+        padding: 10px;
+        margin-left: 10px;
+    }
+
+    .para h1 {
+        font-size: 20px;
+    }
+
+    .para p {
+        font-size: 10px;
+    }
+
+    .btn {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+
+    /* Visit Our New Store Section */
+    .para-outline {
+        height: 50vh;
+    }
+
+    .para-1 {
+        max-width: 250px;
+        height: 40vh;
+        padding: 10px;
+        margin-left: 10px;
+    }
+
+    .para-1 h1 {
+        font-size: 20px;
+    }
+
+    .para-1 p {
+        font-size: 10px;
+    }
+
+    .button {
+        padding: 5px 10px;
+        font-size: 10px;
+        width: 80%;
+    }
+
+    /* Office Image */
+    .office-img img {
+        width: 90%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer-column h3 {
+        font-size: 14px;
+    }
+
+    .footer-column ul li a {
+        font-size: 12px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        margin: 0 8px;
+    }
+
+    .language-selector a {
+        font-size: 10px;
+        margin: 5px 6px;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+}
