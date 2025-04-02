@@ -785,7 +785,7 @@ nav ul li a:hover {
 
     .para {
         max-width: 300px;
-        height: 45vh;
+        height: 55vh;
         padding: 15px;
         margin-left: 20px;
     }
@@ -836,8 +836,8 @@ nav ul li a:hover {
 
     /* Footer */
     .footer-container {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        text-align: left;
     }
 
     .footer-column {
@@ -950,12 +950,12 @@ nav ul li a:hover {
 
     /* GWR for Business Section */
     .para-inline {
-        height: 50vh;
+        height: 60vh;
     }
 
     .para {
         max-width: 250px;
-        height: 40vh;
+        height: 50vh;
         padding: 10px;
         margin-left: 10px;
     }
@@ -996,7 +996,7 @@ nav ul li a:hover {
     .button {
         padding: 5px 10px;
         font-size: 10px;
-        width: 80%;
+        width: 50%;
     }
 
     /* Office Image */
